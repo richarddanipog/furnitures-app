@@ -1,0 +1,302 @@
+#carouselHomePage {
+  .main-image {
+    position: relative;
+    background-color: rgb(243, 243, 243);
+    height: 75vh;
+    overflow: hidden;
+
+    &__slide-1 {
+      position: absolute;
+      bottom: 5%;
+      right: 0;
+      animation: bottomTop 1.5s;
+      @include respond(tab-land) {
+        // width < 1200?
+        height: 45vh;
+      }
+      @include respond(tab-port) {
+        // width < 900?
+        height: 35vh;
+      }
+      @include respond(big-desktop) {
+        height: 55vh;
+      }
+    }
+
+    &__slide-2 {
+      position: absolute;
+      animation: topBottom 1.5s;
+      @include respond(tab-land) {
+        // width < 1200?
+        height: 45vh;
+        top: -15%;
+        left: 10%;
+      }
+      @include respond(tab-port) {
+        // width < 900?
+        height: 40vh;
+        top: -15%;
+        left: 5%;
+      }
+      @include respond(big-desktop) {
+        height: 55vh;
+        top: -15%;
+        left: 20%;
+      }
+    }
+
+    &__slide-3 {
+      position: absolute;
+      animation: topBottom 1.5s;
+      @include respond(tab-land) {
+        // width < 1200?
+        height: 38vh;
+        top: -15%;
+        left: 30%;
+      }
+      @include respond(tab-port) {
+        // width < 900?
+        height: 30vh;
+        top: -15%;
+        left: 35%;
+      }
+      @include respond(big-desktop) {
+        height: 45vh;
+        top: -15%;
+        left: 33%;
+      }
+    }
+
+    &__slide-4 {
+      position: absolute;
+      animation: fadeBottom 1.5s;
+      @include respond(tab-land) {
+        // width < 1200?
+        height: 40vh;
+        bottom: -10%;
+        left: 10%;
+      }
+      @include respond(tab-port) {
+        // width < 900?
+        height: 35vh;
+        bottom: -10%;
+        left: 5%;
+      }
+      @include respond(big-desktop) {
+        height: 60vh;
+        bottom: -10%;
+        left: 13%;
+      }
+    }
+    &__slide-5 {
+      position: absolute;
+      animation: fadeRight 1.5s;
+      @include respond(tab-land) {
+        // width < 1200?
+        height: 20vh;
+        top: 5%;
+        left: 35%;
+      }
+      @include respond(tab-port) {
+        // width < 900?
+        height: 15vh;
+        top: 30%;
+        left: 35%;
+      }
+      @include respond(big-desktop) {
+        height: 20vh;
+        top: 5%;
+        left: 35%;
+      }
+    }
+
+    &__slide-6 {
+      position: absolute;
+      animation: bottomTop 1.5s;
+      @include respond(tab-land) {
+        // width < 1200?
+        height: 40vh;
+        bottom: 5%;
+        right: 10%;
+      }
+      @include respond(tab-port) {
+        // width < 900?
+        height: 25vh;
+        bottom: 5%;
+        right: 10%;
+      }
+      @include respond(big-desktop) {
+        height: 50vh;
+        bottom: 5%;
+        right: 10%;
+      }
+    }
+    &__slide-7 {
+      position: absolute;
+      animation: rightEffect 1.5s;
+      @include respond(tab-land) {
+        // width < 1200?
+        height: 40vh;
+        bottom: 5%;
+        right: 10%;
+      }
+      @include respond(tab-port) {
+        // width < 900?
+        height: 25vh;
+        bottom: 5%;
+        right: 10%;
+      }
+      @include respond(big-desktop) {
+        height: 50vh;
+        bottom: 5%;
+        right: 10%;
+      }
+    }
+
+    &__slide-9 {
+      position: absolute;
+      animation: leftToRight 1.5s;
+      @include respond(tab-land) {
+        // width < 1200?
+        height: 40vh;
+        bottom: 5%;
+        left: 15%;
+      }
+      @include respond(tab-port) {
+        // width < 900?
+        height: 25vh;
+        bottom: 5%;
+        left: 15%;
+      }
+      @include respond(big-desktop) {
+        height: 50vh;
+        bottom: 5%;
+        left: 15%;
+      }
+    }
+
+    &__content {
+      position: absolute;
+      bottom: 5%;
+      left: 5%;
+      span {
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 400;
+      }
+      p {
+        font-size: $font-size-defualt;
+        color: $color-font-primary;
+      }
+    }
+    &__title-page2 {
+      span {
+        font-size: 3rem;
+      }
+      p {
+        font-size: $font-size-defualt;
+        color: $color-font-primary;
+      }
+      position: absolute;
+      top: 5%;
+      right: 5%;
+    }
+    &__title-page3 {
+      span {
+        font-size: 3rem;
+      }
+      p {
+        font-size: $font-size-defualt;
+        color: $color-font-primary;
+      }
+      position: absolute;
+      top: 5%;
+      left: 5%;
+    }
+  }
+  .carousel-control-next,
+  .carousel-control-prev {
+    filter: invert(100%);
+  }
+
+  .carousel-indicators li {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    margin: 10px;
+    text-indent: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background-color: #000;
+    box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+  .carousel-indicators .active {
+    width: 1rem;
+    height: 1rem;
+    margin: 10px;
+    background-color: $color-yellow-primary;
+  }
+}
+// ANIMATIONS PAGE 1
+
+@keyframes bottomTop {
+  0% {
+    bottom: -100%;
+  }
+  100% {
+    bottom: 5%;
+  }
+}
+@keyframes topBottom {
+  0% {
+    top: -100%;
+  }
+  100% {
+    top: -15%;
+  }
+}
+
+// ANIMATIONS PAGE 2
+
+@keyframes fadeBottom {
+  0% {
+    bottom: -20%;
+    opacity: 0;
+  }
+  100% {
+    bottom: -10%;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    left: 45%;
+  }
+  100% {
+    opacity: 1;
+    left: 35%;
+  }
+}
+
+// ANIMATIONS PAGE 3
+
+@keyframes leftToRight {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 15%;
+  }
+}
+
+@keyframes rightEffect {
+  0% {
+    right: -10%;
+  }
+  100% {
+    right: 10%;
+  }
+}

@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap");
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 75.1em) {
+      @content;
+    } //1800
+  }
+}
+html {
+  backface-visibility: hidden;
+  // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tab-land) {
+    // width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(tab-port) {
+    // width < 900?
+    font-size: 50%; //1 rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12, 12/16
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+}
+
+.section-shop {
+  text-align: center;
+  background-color: $color-background-grey;
+  overflow: hidden;
+  backface-visibility: hidden;
+  p {
+    font-size: $font-size-defualt;
+    color: $color-font-primary;
+  }
+
+  &__images {
+    &-single {
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+
+      img {
+        cursor: pointer;
+        transition: all 0.5s;
+        @include respond(tab-land) {
+          // width < 1200?
+          height: 35vh;
+          top: -15%;
+          left: 30%;
+        }
+        @include respond(tab-port) {
+          // width < 900?
+          height: 40vh;
+        }
+        @include respond(big-desktop) {
+          height: 35vh;
+        }
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.1);
+          opacity: 0.75;
+          border: none;
+        }
+        span {
+          opacity: 1;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    &:hover img:not(:hover) {
+      filter: blur(1.5px);
+    }
+  }
+  &__product-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: all 0.6s;
+    font-size: $font-size-defualt;
+    font-weight: 600;
+  }
+}
+
+.direction-to-gallery {
+  color: $color-white;
+  font-weight: 700;
+  font-size: $font-size-defualt;
+
+  &__btn {
+    padding: 0.6rem 3rem;
+    border-radius: 0.4rem;
+    border: none;
+    color: $color-white;
+    background-color: $color-yellow-primary;
+  }
+}
+
+#swipe {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .side-button {
+    &__cart {
+      &--icon {
+        color: $color-white;
+        z-index: 100;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .diabled-element {
+    display: none;
+  }
+  .section-shop {
+    &__images {
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  #swipe {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .moblie-tab {
+    display: none;
+  }
+}

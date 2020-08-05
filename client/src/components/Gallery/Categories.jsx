@@ -25,7 +25,7 @@ class Categories extends Component {
           />
         </div>
 
-        <section className={"categories-choices p-5"}>
+        <section className={"categories-choices p-5 container"}>
           <div className={"text-center p-4 mb-5"}>
             <h3 style={{ borderBottom: "4px solid #000", display: "inline" }}>
               Choose By Categories
@@ -98,11 +98,11 @@ class Categories extends Component {
               </Link>
             </div>
           </div>
-          <hr />
+
           <p id={"swipe"}>&#9754; Swipe &#9755;</p>
         </section>
-
-        <section className={"suggestion-section"}>
+        <hr />
+        <section className={"suggestion-section container"}>
           <div className={"d-flex flex-column align-items-center text-center"}>
             <h2>Popular Furniture Styles</h2>
             <p style={{ width: "50%" }}>

@@ -119,7 +119,7 @@ const Gallery = (props) => {
   };
 
   return (
-    <section className={"gallery"}>
+    <section className={"gallery container"}>
       <div>
         <div className={"row m-0"}>
           {items.map((item, i) => buildCards(item, i))}

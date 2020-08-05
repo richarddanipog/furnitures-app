@@ -35,7 +35,7 @@ class HomePage extends Component {
     return (
       <div>
         <CarouselHomePage />
-        <section className="section-shop pt-5 ">
+        <section className="section-shop pt-5 container">
           <div className="p-5">
             <h2>Shopping everyday</h2>
             <p>

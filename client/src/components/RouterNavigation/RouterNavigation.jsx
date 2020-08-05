@@ -19,7 +19,7 @@ const RouterNavigation = ({ toAdminPanel }) => {
     <>
       {!toAdminPanel ? (
         <Router>
-          <div className={`App container`}>
+          <div className={`App`}>
             <Header />
 
             <Switch>

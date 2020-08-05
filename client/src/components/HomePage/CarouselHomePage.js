@@ -3,7 +3,7 @@ import React from "react";
 export default function CarouselHomePage() {
   return (
     <div id="carouselHomePage" className="carousel slide" data-ride="carousel">
-      <ol className="carousel-indicators justify-content-start">
+      <ol className="carousel-indicators justify-content-start ">
         <li
           data-target="#carouselHomePage"
           data-slide-to="0"
@@ -12,9 +12,9 @@ export default function CarouselHomePage() {
         <li data-target="#carouselHomePage" data-slide-to="1"></li>
         <li data-target="#carouselHomePage" data-slide-to="2"></li>
       </ol>
-      <div className="carousel-inner">
-        <div className="carousel-item active">
-          <div className={"main-image"}>
+      <div className="carousel-inner ">
+        <div className="carousel-item active ">
+          <div className={"main-image container"}>
             <img
               className={"main-image__slide-1"}
               src="../../images/h1-slide1-img.png"
@@ -39,8 +39,8 @@ export default function CarouselHomePage() {
             </div>
           </div>
         </div>
-        <div className="carousel-item">
-          <div className={"main-image"}>
+        <div className="carousel-item ">
+          <div className={"main-image container"}>
             <img
               className={"main-image__slide-4"}
               src="../../images/chair.png"
@@ -67,7 +67,7 @@ export default function CarouselHomePage() {
           </div>
         </div>
         <div className="carousel-item">
-          <div className={"main-image"}>
+          <div className={"main-image container"}>
             <img
               className={"main-image__slide-7"}
               src="../../images/h1-img-4.png"

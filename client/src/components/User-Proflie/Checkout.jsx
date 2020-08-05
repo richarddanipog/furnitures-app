@@ -63,7 +63,7 @@ const Checkout = (props) => {
   return (
     <>
       <div className={"shopping-cart"}>
-        <div className="shopping-cart__header d-flex justify-content-between align-items-center">
+        <div className="shopping-cart__header d-flex justify-content-between align-items-center container">
           <h2>Shopping Cart</h2>
           <span>Price</span>
         </div>

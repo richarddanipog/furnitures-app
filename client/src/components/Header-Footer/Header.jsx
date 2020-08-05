@@ -49,7 +49,7 @@ class Header extends Component {
     return (
       <header>
         <div className={`header`}>
-          <div className="header-nav row align-items-center">
+          <div className="header-nav row align-items-center container">
             <div className={"companyName col-sm-12 col-md-3 "}>
               <Link to={"/"} style={{ color: "#000", textDecoration: "none" }}>
                 <img

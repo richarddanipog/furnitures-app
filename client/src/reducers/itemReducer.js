@@ -8,6 +8,7 @@ const initialState = {
   randomItems: [],
   itemReviews: [],
   newItemId: undefined,
+  loading: false,
 };
 
 export default function (state = initialState, action) {

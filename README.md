@@ -5,9 +5,9 @@ I create a Furniture store website - Using React js, Axios, Redux, Nodejs Expres
 
 ## Preview
 
-![](images/picture1.PNG)
-![](images/picture2.PNG)
-![](images/picture3.PNG)
+![](client/images/picture1.PNG)
+![](client/images/picture2.PNG)
+![](client/images/picture3.PNG)
 
 ## How to use
 

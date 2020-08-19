@@ -279,10 +279,6 @@
         font-size: 1.8em;
       }
     }
-    &__icon {
-      width: 20%;
-      margin-right: 1.5rem;
-    }
   }
 
   &-form {
@@ -357,13 +353,6 @@
       @include respond(big-desktop) {
         height: 50rem;
       }
-    }
-
-    &--svg2 {
-      position: absolute;
-      left: 10%;
-      top: 10%;
-      animation: rightToLeft 0.7s linear;
     }
   }
 

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { ReactComponent as Logo } from "../../svg-icons/singup.svg";
 import validate, { field } from "../Validations/validator";
 import InputErrors from "../Validations/inputErrors";
 import { connect } from "react-redux";
@@ -75,9 +74,9 @@ class SingUpUser extends Component {
   render() {
     const { approvedSignup } = this.props;
     return (
-      <div className={"signup"}>
+      <div className={"signup container"}>
         {!approvedSignup ? (
-          <div className={"signup__card mb-5"}>
+          <div className={"signup__card mb-5 "}>
             <h4 className="alert-heading text-center">Sing up, welcome!</h4>
             <p className="text-center">
               Hello User! Please fill in your details
@@ -187,7 +186,6 @@ class SingUpUser extends Component {
               d="M0,0L48,53.3C96,107,192,213,288,218.7C384,224,480,128,576,122.7C672,117,768,203,864,197.3C960,192,1056,96,1152,96C1248,96,1344,192,1392,240L1440,288L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
             ></path>
           </svg>
-          <Logo className="signup__img--svg2" />
         </div>
       </div>
     );

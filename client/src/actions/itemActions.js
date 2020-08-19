@@ -76,6 +76,7 @@ export const randomItems = (numOfProducts) => async (dispatch) => {
 };
 
 export const fetchSingleItem = (byId) => async (dispatch) => {
+  dispatch({ type: "ACTIVE_LOADING_SCREEN" });
   try {
     const result = await fetcher.get(`http://localhost:6500/items/${byId}`);
     return dispatch({

@@ -13,6 +13,8 @@ const initialState = {
 
 export default function (state = initialState, action) {
   switch (action.type) {
+    case "ACTIVE_LOADING_SCREEN":
+      return { ...state, loading: true };
     case "FETCH_ITEMS":
       return {
         ...state,
@@ -22,6 +24,7 @@ export default function (state = initialState, action) {
       return {
         ...state,
         item: { ...action.payload },
+        loading: false,
       };
     case "SHOPPING_CART":
       return {

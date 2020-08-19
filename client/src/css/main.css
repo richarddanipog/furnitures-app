@@ -1277,10 +1277,6 @@ h6 {
 .footer-social span i {
   font-size: 1.8em;
 }
-.footer-social__icon {
-  width: 20%;
-  margin-right: 1.5rem;
-}
 .footer-form__email {
   width: 50%;
   border: none;
@@ -1357,12 +1353,6 @@ h6 {
   .signup__img svg {
     height: 50rem;
   }
-}
-.signup__img--svg2 {
-  position: absolute;
-  left: 10%;
-  top: 10%;
-  animation: rightToLeft 0.7s linear;
 }
 .signup__success {
   display: flex;
@@ -2212,4 +2202,24 @@ input:checked ~ .checked_color_ex {
 }
 .smallCard .item-content label {
   cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

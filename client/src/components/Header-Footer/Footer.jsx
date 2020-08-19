@@ -1,21 +1,11 @@
 import React, { Component } from "react";
 
-import { ReactComponent as ComputerIcon } from "../../svg-icons/footer3.svg";
-
 class Footer extends Component {
   render() {
     return (
       <footer className={`footer`}>
-        {/* <div
-          className={"d-flex align-items-center justify-content-between pt-5 "}
-        > */}
-        {/* <ComputerIcon /> */}
-        {/* </div> */}
         <div className="row container">
           <div className="footer-social col-lg-6 col-s-12 mt-5 d-flex">
-            <div className="footer-social__icon">
-              <ComputerIcon />
-            </div>
             <div>
               <h1 className={"mb-5"}>Contact Us</h1>
               <span>

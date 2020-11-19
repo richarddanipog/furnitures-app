@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ReactComponent as NotFound } from "../../svg-icons/notFound.svg";
+// import { ReactComponent as NotFound } from "../../svg-icons/notFound.svg";
 
 class Loader extends Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class Loader extends Component {
             <h1 className={"text-center"}>
               Sorry, not found try something else
             </h1>
-            <NotFound />
+            {/* <NotFound /> */}
           </div>
         ) : (
           <div className="loading">
